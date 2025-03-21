@@ -34,7 +34,7 @@ const Egg = () => {
     <main className="flex flex-col items-center w-full h-full px-4">
       <Link
         href="/"
-        className="flex justify-center text-4xl pt-16 font-extrabold text-gray-100 mb-10"
+        className="flex justify-center text-3xl pt-16 font-extrabold text-gray-100 mb-10"
       >
         <h1 className="drop-shadow-2xl">🍻Tap Tap🍻</h1>
       </Link>
