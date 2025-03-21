@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function Home() {
   return (
     <main className="flex flex-col items-center w-full h-screen py-12 px-4 ">
-      <div className="flex justify-center text-[32px] font-extrabold text-gray-100 text-center">
+      <div className="flex justify-center text-4xl font-extrabold text-gray-100 text-center">
         <h1 className="drop-shadow-md">🍻 Drinking Games 🍻</h1>
       </div>
       <div className="h-full flex items-center">

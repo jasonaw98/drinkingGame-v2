@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 const Egg = () => {
-  const TOTAL_ITEM = 16;
+  const TOTAL_ITEM = 20;
   const [eggs, setEggs] = useState(new Array(TOTAL_ITEM).fill("normal")); // Initialize all eggs as normal
   const [gameOver, setGameOver] = useState(false);
   const [spoiledEggIndex, setSpoiledEggIndex] = useState(0);
@@ -36,7 +36,7 @@ const Egg = () => {
         href="/"
         className="flex justify-center text-4xl pt-16 font-extrabold text-gray-100 mb-10"
       >
-        <h1 className="drop-shadow-2xl">🍻Tap Tap🍻</h1>
+        <h1 className="drop-shadow-2xl">💚PEPE💚</h1>
       </Link>
       <div className="grid grid-cols-4 w-full max-w-lg gap-0 justify-center items-center">
         {eggs.map((egg, index) => (
@@ -48,13 +48,13 @@ const Egg = () => {
                 : initializeGame()
             }
             className={`flex items-center justify-center flex-grow ease-in-out duration-500 ${
-              index === spoiledEggIndex && gameOver && "scale-[4] z-20"
+              index === spoiledEggIndex && gameOver && "scale-[3] z-20"
             }`}
           >
             <Image
-              src="/sticker2.gif"
-              width={100}
-              height={100}
+              src="/pepe.webp"
+              width={90}
+              height={90}
               alt="egg"
               className={`${egg === "tapped" && "opacity-0"}`}
             ></Image>
