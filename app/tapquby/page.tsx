@@ -34,7 +34,7 @@ const Egg = () => {
     <main className="flex flex-col items-center w-full h-full px-4">
       <Link
         href="/"
-        className="flex justify-center text-3xl pt-16 font-extrabold text-gray-100 mb-10"
+        className="flex justify-center text-4xl pt-14 font-extrabold text-gray-100 mb-12"
       >
         <h1 className="drop-shadow-2xl">🍻Tap Tap🍻</h1>
       </Link>
@@ -42,25 +42,33 @@ const Egg = () => {
         {eggs.map((egg, index) => (
           <div
             key={index}
-            onClick={() =>
-              !gameOver
-                ? egg === "normal" && handleEggTap(index)
-                : initializeGame()
-            }
+            onClick={() => !gameOver && egg === "normal" && handleEggTap(index)}
             className={`flex items-center justify-center flex-grow ease-in-out duration-500 ${
-              index === spoiledEggIndex && gameOver && "scale-[4] z-20"
+              index === spoiledEggIndex && gameOver && "scale-[4] z-2"
             }`}
           >
             <Image
               src="/sticker2.gif"
+              unoptimized
               width={100}
               height={100}
               alt="egg"
-              className={`${egg === "tapped" && "opacity-0"}`}
+              className={`${egg === "tapped" && "opacity-0"} scale-110`}
             ></Image>
           </div>
         ))}
       </div>
+      {gameOver && (
+        <div className="mt-28 z-50">
+          <button
+            onClick={initializeGame}
+            type="button"
+            className="text-white border border-gray-500 bg-gradient-to-r from-indigo-400 to-blue-400 hover:bg-gradient-to-bl font-semibold rounded-xl text-md px-4 py-2.5 text-center mr-2 mb-2 shadow-md"
+          >
+            Restart
+          </button>
+        </div>
+      )}
     </main>
   );
 };

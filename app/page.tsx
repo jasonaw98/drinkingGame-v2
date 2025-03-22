@@ -16,6 +16,7 @@ export default function Home() {
             <Image
               className="rounded-xl"
               src={"/pepe.webp"}
+              unoptimized
               width={120}
               height={100}
               alt="Picture of the author"
@@ -33,13 +34,36 @@ export default function Home() {
             <Image
               className="rounded-xl"
               src={"/sticker3.gif"}
-              width={120}
+              unoptimized
+              width={130}
               height={100}
               alt="Picture of the author"
             />
             <span className="w-full flex justify-center rounded-b-xl">
               <p className="text-xl font-bold text-gray-100 text-center">
                 Tap Game
+              </p>
+            </span>
+          </Link>
+          <Link
+            href="/dice"
+            className="flex flex-col items-center rounded-2xl bg-[#262739] p-3 h-full justify-center"
+          >
+            <h2 className="text-8xl p-4 text-center">🎲</h2>
+            <span className="w-full flex justify-center rounded-b-xl">
+              <p className="text-xl font-bold text-gray-100 text-center">
+                Liar 🎲
+              </p>
+            </span>
+          </Link>
+          <Link
+            href="/share"
+            className="flex flex-col items-center rounded-2xl bg-[#262739] p-3 h-full justify-center"
+          >
+            <h2 className="text-8xl p-4 text-center">👥</h2>
+            <span className="w-full flex justify-center rounded-b-xl">
+              <p className="text-xl font-bold text-gray-100 text-center">
+                Share 📲
               </p>
             </span>
           </Link>

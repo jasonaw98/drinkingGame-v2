@@ -31,7 +31,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="h-screen">
+    <html lang="en" className="h-full overflow-hidden">
       <Script
         defer
         src="https://umami-analytics-gules.vercel.app/script.js"
