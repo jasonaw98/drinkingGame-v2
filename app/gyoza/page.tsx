@@ -67,7 +67,7 @@ const Egg = () => {
         ))}
       </div>
       {gameOver && (
-        <div className="mt-28 z-50">
+        <div className="mt-6 z-50">
           <button
             onClick={initializeGame}
             type="button"
