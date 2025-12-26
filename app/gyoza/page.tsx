@@ -4,15 +4,23 @@ import Link from "next/link";
 import Image from "next/image";
 
 const Egg = () => {
-  const TOTAL_ITEM = 20;
+  const TOTAL_ITEM = 24;
+  const FOOD_IMAGES = ["/gyoza.png", "/bao.png"];
+
   const [eggs, setEggs] = useState(new Array(TOTAL_ITEM).fill("normal")); // Initialize all eggs as normal
   const [gameOver, setGameOver] = useState(false);
   const [spoiledEggIndex, setSpoiledEggIndex] = useState(0);
+  const [eggImages, setEggImages] = useState<string[]>([]);
 
   const initializeGame = () => {
     setEggs(new Array(TOTAL_ITEM).fill("normal"));
     const index = Math.floor(Math.random() * TOTAL_ITEM);
     setSpoiledEggIndex(index);
+
+    const randomImages = new Array(TOTAL_ITEM).fill(null).map(() => {
+      return FOOD_IMAGES[Math.floor(Math.random() * FOOD_IMAGES.length)];
+    });
+    setEggImages(randomImages);
     setGameOver(false);
   };
 
@@ -36,7 +44,7 @@ const Egg = () => {
         href="/"
         className="flex justify-center text-4xl pt-14 font-extrabold text-gray-100 mb-12"
       >
-        <h1 className="drop-shadow-2xl">💚PEPE💚</h1>
+        <h1 className="drop-shadow-2xl">🥟GYOZA🥟</h1>
       </Link>
       <div className="grid grid-cols-4 w-full max-w-lg gap-0 justify-center items-center">
         {eggs.map((egg, index) => (
@@ -48,13 +56,13 @@ const Egg = () => {
             }`}
           >
             <Image
-              src="/pepe.webp"
+              src={eggImages[index] || "/gyoza.png"}
               unoptimized
-              width={80}
+              width={90}
               height={90}
               alt="egg"
               className={`${egg === "tapped" && "opacity-0"}`}
-            ></Image>
+            />
           </div>
         ))}
       </div>

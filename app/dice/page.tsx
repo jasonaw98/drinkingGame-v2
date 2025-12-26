@@ -91,7 +91,7 @@ const DraggableElement = () => {
         </div>
 
         <div
-          className={`absolute left-1/2 -translate-x-1/2 w-52 h-60 bg-gradient-to-br from-gray-700 to-gray-900 rounded-b-lg border border-white/30 rounded-t-[100px] cursor-pointer shadow-2xl ${
+          className={`absolute left-1/2 -translate-x-1/2 w-52 h-60 bg-linear-to-br from-gray-700 to-gray-900 rounded-b-lg border border-white/30 rounded-t-[100px] cursor-pointer shadow-2xl ${
             isDragging ? "ring-3 ring-blue-400" : " duration-500 ease-in-out"
           } ${isShaking ? "animate-shake" : ""}`}
           style={{ top: `${position}px` }}
@@ -101,7 +101,7 @@ const DraggableElement = () => {
       </div>
       <button
         onClick={rollDice}
-        className="text-white bg-gradient-to-br from-gray-700 to-gray-800 hover:bg-blue-700 font-semibold rounded-lg text-md px-4 py-2 shadow-md cursor-pointer mt-16"
+        className="text-white bg-linear-to-br from-gray-700 to-gray-800 hover:bg-blue-700 font-semibold rounded-lg text-md px-4 py-2 shadow-md cursor-pointer mt-16"
       >
         Shake 🎲
       </button>

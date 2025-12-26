@@ -43,7 +43,7 @@ const Egg = () => {
           <div
             key={index}
             onClick={() => !gameOver && egg === "normal" && handleEggTap(index)}
-            className={`flex items-center justify-center flex-grow ease-in-out duration-500 ${
+            className={`flex items-center justify-center grow ease-in-out duration-500 ${
               index === spoiledEggIndex && gameOver && "scale-[4] z-2"
             }`}
           >
@@ -63,7 +63,7 @@ const Egg = () => {
           <button
             onClick={initializeGame}
             type="button"
-            className="text-white border border-gray-500 bg-gradient-to-r from-indigo-400 to-blue-400 hover:bg-gradient-to-bl font-semibold rounded-xl text-md px-4 py-2.5 text-center mr-2 mb-2 shadow-md"
+            className="text-white border border-gray-500 bg-linear-to-r from-indigo-400 to-blue-400 hover:bg-linear-to-bl font-semibold rounded-xl text-md px-4 py-2.5 text-center mr-2 mb-2 shadow-md"
           >
             Restart
           </button>

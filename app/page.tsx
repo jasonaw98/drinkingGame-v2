@@ -10,8 +10,26 @@ export default function Home() {
       <div className="h-full flex items-center">
         <div className="grid grid-cols-2 gap-6 items-center">
           <Link
+            href="/gyoza"
+            className="flex flex-col items-center rounded-2xl bg-linear-to-br from-gray-700 to-gray-900 p-3 h-full justify-center"
+          >
+            <Image
+              className="rounded-xl"
+              src={"/gyoza.png"}
+              unoptimized
+              width={120}
+              height={100}
+              alt="Picture of the author"
+            />
+            <span className="w-full flex justify-center rounded-b-xl">
+              <p className="text-xl font-bold text-gray-100 text-center">
+                Tap Game
+              </p>
+            </span>
+          </Link>
+          <Link
             href="/pepe"
-            className="flex flex-col items-center rounded-2xl bg-[#262739] p-3 h-full justify-center"
+            className="flex flex-col items-center rounded-2xl bg-linear-to-br from-gray-700 to-gray-900 p-3 h-full justify-center"
           >
             <Image
               className="rounded-xl"
@@ -29,7 +47,7 @@ export default function Home() {
           </Link>
           <Link
             href="/tapquby"
-            className="flex flex-col items-center rounded-2xl bg-[#262739] p-3 h-full justify-center"
+            className="flex flex-col items-center rounded-2xl bg-linear-to-br from-gray-700 to-gray-900 p-3 h-full justify-center"
           >
             <Image
               className="rounded-xl"
@@ -47,7 +65,7 @@ export default function Home() {
           </Link>
           <Link
             href="/dice"
-            className="flex flex-col items-center rounded-2xl bg-[#262739] p-3 h-full justify-center"
+            className="flex flex-col items-center rounded-2xl bg-linear-to-br from-gray-700 to-gray-900 p-3 h-full justify-center"
           >
             <h2 className="text-8xl p-4 text-center">🎲</h2>
             <span className="w-full flex justify-center rounded-b-xl">
@@ -58,7 +76,7 @@ export default function Home() {
           </Link>
           <Link
             href="/share"
-            className="flex flex-col items-center rounded-2xl bg-[#262739] p-3 h-full justify-center"
+            className="flex flex-col items-center rounded-2xl bg-linear-to-br from-gray-700 to-gray-900 p-3 h-full justify-center"
           >
             <h2 className="text-8xl p-4 text-center">👥</h2>
             <span className="w-full flex justify-center rounded-b-xl">

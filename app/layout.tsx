@@ -34,7 +34,7 @@ export default function RootLayout({
     <html lang="en" className="h-full overflow-hidden">
       <Script
         defer
-        src="https://umami-analytics-gules.vercel.app/script.js"
+        src="https://umami-jason.vercel.app/script.js"
         data-website-id="46cf4871-18e1-49b1-b948-d455912e4033"
       />
       <body
